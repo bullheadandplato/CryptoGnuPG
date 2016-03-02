@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0"
+          prefWidth="484.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.Controllers.FriendsController">
+    <stylesheets>
+        <URL value="@stylesheets/login.css"/>
+    </stylesheets>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="28.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="369.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="18.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="150.0" minHeight="0.0" prefHeight="97.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="256.0" minHeight="2.0" prefHeight="55.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0"
+              prefWidth="426.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <children>
+                <Label prefHeight="24.0" prefWidth="211.0" text="Select Friend" textFill="#20d454">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                    <effect>
+                        <Glow level="0.5"/>
+                    </effect>
+                </Label>
+                <ComboBox fx:id="friends" prefHeight="35.0" prefWidth="162.0" promptText="Select friend id"/>
+            </children>
+        </HBox>
+        <Button fx:id="submit" mnemonicParsing="false" onAction="#chat" prefHeight="42.0" prefWidth="131.0" text="Chat"
+                textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+        <HBox prefHeight="45.0" prefWidth="425.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                <Label contentDisplay="CENTER" prefHeight="15.0" prefWidth="230.0" text="Server IP"
+                       textAlignment="CENTER" textFill="#20d450" textOverrun="CLIP">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                    <effect>
+                        <Glow level="0.49"/>
+                    </effect>
+                </Label>
+                <TextField fx:id="host" prefHeight="33.0" prefWidth="182.0"/>
+            </children>
+        </HBox>
+        <Label alignment="CENTER" prefHeight="52.0" prefWidth="253.0" text="I need Information" textFill="#e31414"
+               GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+                <Font size="34.0"/>
+            </font>
+        </Label>
+
+    </children>
+</GridPane>

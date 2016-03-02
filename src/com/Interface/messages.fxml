@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0"
+          prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.Controllers.messageController">
+    <stylesheets>
+        <URL value="@stylesheets/messages.css"/>
+    </stylesheets>
+    <children>
+        <Label text="You: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button fx:id="logout" onAction="#logout" prefHeight="25.0" prefWidth="88.0" text="LOGOUT"
+                GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0"/>
+        <Text fx:id="user" stroke="#614141" text="bug" wrappingWidth="349.36962890625" GridPane.columnIndex="0"
+              GridPane.halignment="CENTER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+            <fill>
+                <LinearGradient endX="0.6971153846153846" endY="0.25">
+                    <stops>
+                        <Stop color="#39cccc"/>
+                        <Stop color="#3bcc64" offset="0.2633333333333333"/>
+                        <Stop color="#39cccc" offset="0.5766666666666667"/>
+                        <Stop color="#39cccc" offset="0.6533333333333334"/>
+                        <Stop color="#3766cc" offset="0.86"/>
+                        <Stop color="#09753f" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <Pane prefHeight="58.0" prefWidth="516.0" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <children>
+                <TextField fx:id="messageField" layoutX="13.0" layoutY="16.0" onAction="#send" prefHeight="26.0"
+                           prefWidth="501.0"/>
+                <Button fx:id="send" layoutX="524.0" layoutY="16.0" mnemonicParsing="false" onAction="#send"
+                        prefHeight="25.0" prefWidth="70.0" text="Send"/>
+            </children>
+        </Pane>
+        <ScrollPane id="messagePane" prefHeight="287.0" prefWidth="542.0" GridPane.rowIndex="1">
+            <content>
+                <Text fx:id="message" text=""/>
+            </content>
+        </ScrollPane>
+
+    </children>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="658.0" minWidth="471.0" prefWidth="600.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="38.0" minHeight="31.0" prefHeight="38.0"/>
+        <RowConstraints maxHeight="350.0" minHeight="22.0" prefHeight="287.0"/>
+        <RowConstraints maxHeight="114.0" minHeight="0.0" prefHeight="58.0"/>
+    </rowConstraints>
+
+
+</GridPane>

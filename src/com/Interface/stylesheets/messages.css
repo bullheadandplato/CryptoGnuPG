@@ -1,0 +1,15 @@
+.button {
+    -fx-background-color: dodgerblue;
+    -fx-text-fill: whitesmoke;
+}
+
+.button:hover {
+    -fx-border-radius: 5px;
+    -fx-background-color: green;
+}
+
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: dodgerblue;
+    -fx-font-size: 14px;
+}

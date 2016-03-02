@@ -1,0 +1,29 @@
+#title {
+    -fx-font-size: 30px;
+}
+
+.txtfeilds:hover {
+    -fx-border-color: green;
+}
+
+.label {
+    -fx-font-size: 20px;
+}
+
+#submit {
+    -fx-background-color: dodgerblue;
+    -fx-font-size: 20px;
+
+}
+
+#submit:hover {
+    -fx-background-radius: 20px;
+    -fx-background-color: dodgerblue;
+    -fx-font-size: 20px;
+    -fx-font-weight: bolder;
+}
+
+.grid {
+    -fx-border-color: dodgerblue;
+    -fx-border-style: dotted;
+}
